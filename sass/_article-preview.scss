@@ -1,0 +1,118 @@
+.article-preview {
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  margin: 0;
+
+  border-radius: 0.75rem;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+
+    > img {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+  }
+
+  &__body {
+    background-color: white;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &__body-main,
+  &__body-footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  &__body-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #6a7179;
+    margin: 40px 0 1rem 0;
+  }
+
+  &__body-text {
+    &--last {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__body-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+
+  &__footer--active {
+    background-color: #49556b;
+  }
+
+  &__author {
+    color: #6a7179;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .article-preview {
+    flex-direction: row;
+    width: auto;
+    max-width: 730px;
+
+    &__image {
+      border-radius: 0;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+
+      > img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        object-position: 10% center;
+        border-top-left-radius: inherit;
+        border-bottom-left-radius: inherit;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      max-height: 280px;
+      border-radius: 0;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+    }
+
+    &__body-main {
+      flex-grow: 1;
+    }
+
+    &__body-title {
+      font-size: 1.75em;
+      line-height: 1.4;
+      margin-top: 30px;
+    }
+
+    &__body-text {
+      font-size: 1.1em;
+    }
+
+  }
+}

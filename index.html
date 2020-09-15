@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+  <div class="article-preview" style="margin-left: auto; margin-right: auto">
+    <div class="article-preview__image">
+      <img src="images/drawers.jpg">
+    </div>
+    <div class="article-preview__body">
+      <div class="article-preview__body-main">
+        <h1 class="article-preview__body-title">Shift the overall look and feel by adding these wonderful touches to furniture in your home</h1>
+        <p class="article-preview__body-text article-preview__body-text--last">Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I’ve got some simple tips to help you make any room feel complete.</p>        
+      </div>
+      <div class="article-preview__body-footer" style="">
+        <div class="media flex-grow-1">
+          <img class="media__image avatar" src="images/avatar-michelle.jpg">
+          <div class="media__body">
+            <div class="article-preview__author">Michelle Appleton</div>
+            <div>28 Jun 2020</div>
+          </div>
+        </div>
+        <div id="article-123-share-menu" class="share-menu">
+          <div class="share-menu__body">
+            <span class="share-menu__text">Share</span>
+            <a href="#" class="share-menu__link"><img src="images/icon-facebook.svg"></a>
+            <a href="#" class="share-menu__link"><img src="images/icon-twitter.svg"></a>
+            <a href="#" class="share-menu__link"><img src="images/icon-pinterest.svg"></a>
+          </div>
+          <button class="share-menu__toggle" data-toggle="#article-123-share-menu" data-toggle-class="share-menu--visible"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Lorenzo Dee</a>.
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

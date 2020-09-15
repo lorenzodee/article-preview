@@ -1,0 +1,11 @@
+.media {
+  display: flex;
+  align-items: center;
+
+  &__image {
+  }
+
+  &__body {
+    margin-inline-start: 1em;
+  }
+}

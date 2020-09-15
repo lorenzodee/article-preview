@@ -1,0 +1,14 @@
+{
+  "name": "article-preview",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx node-sass --recursive --output css --source-map true --source-map-contents sass sass",
+    "start": "npx node-sass --watch --recursive --output css --source-map true --source-map-contents sass sass"
+  },
+  "keywords": [],
+  "author": "Lorenzo Dee <lorenzo.dee@orangeandbronze.com>",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

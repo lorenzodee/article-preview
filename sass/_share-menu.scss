@@ -1,0 +1,109 @@
+.share-menu {
+
+  border-radius: inherit;
+
+  &__body {
+    display: none;
+    border-radius: inherit;
+  }
+
+  &--visible &__body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #49556b;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-inline-end: 0.75em;
+    color: #8e9db2;
+  }
+
+  &__link {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    line-height: 1;
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border: 0 none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background-color: #edf2f8;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 13px;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="%236E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>');
+    }
+  }
+
+  &--visible &__toggle,
+  &__toggle:hover,
+  &__toggle:active,
+  &__toggle:focus {
+    background-color: #667b96;
+
+    &::after {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="%23ffffff" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>');
+    }
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .share-menu {
+    position: relative;
+
+    &__link {
+      margin-left: 1em;
+      margin-right: 0;
+    }
+
+    &--visible &__body {
+      position: absolute;
+      top: -85px;
+      right: unset;
+      bottom: unset;
+      left: 50%;
+
+      display: flex;
+      align-items: center;
+      background-color: #49556b;
+      border-radius: 0.75rem;
+      padding: 18px 36px;
+      transform: translateX(-50%);
+
+      &::after {
+        // triangle (width: 24px)
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: calc(50% - (24px / 2));
+        border-color: transparent;
+        border-width: calc(24px / 2);
+        border-style: solid;
+        border-top-color: #49556b;
+      }
+    }
+  }
+}

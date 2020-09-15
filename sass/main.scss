@@ -1,0 +1,31 @@
+@import 'reset';
+@import 'flex-utils';
+@import 'media';
+@import 'article-preview';
+@import 'share-menu';
+
+html, body {
+  background-color: #edf2f8;
+  color: #74797f; // aeb2bc
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+
+  padding: 25px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 1em 0;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
